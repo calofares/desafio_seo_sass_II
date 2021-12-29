@@ -1,0 +1,400 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    font-family: sans-serif;
+    font-size: 1rem;
+}
+
+.header{
+    display:flex;
+    justify-content: space-between;
+    background: black;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px 0px;
+    position: sticky;
+    top: 0;
+    letter-spacing: 0.15rem;
+    height: 100px;
+    z-index: 2;
+}
+
+.header_titulo{
+    display: flex;
+    align-items: center;
+    background-image: linear-gradient(to bottom,grey,white);
+    background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    font-family: 'Bebas Neue', cursive;
+    font-size: 3.5rem;
+    letter-spacing: 7.5px;
+    padding-left: 15px;
+}
+
+.header_titulo h1{
+    font-size: 3.5rem;
+}
+
+.nav_font_size{
+    font-size: 1.25rem;
+}
+
+main{
+    background-image: linear-gradient(to bottom,black,#232b2b);
+}
+
+/* EMPIEZA INDEX */
+
+main .index_titulo{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 25px 0px;
+}
+
+main .index_titulo h3{
+    color: white;
+    font-size: 2rem;
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 2px;
+}
+main .index_titulo h2{
+    color: gold;
+    font-size: 2.5rem;
+    font-style: italic;
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 2px;
+}
+
+.index_res h3 a:hover{
+    color:gold;
+}
+
+.index_res{
+    display: flex;
+    text-align: center;
+    padding: 5vh 5vw;
+}
+.index_res_1{
+    padding: 1vh 5vw;
+}
+.index_res_2{
+    padding: 1vh 5vw;
+}
+.index_res h3 a{
+    display: grid;
+    text-decoration: none;
+    color:white;
+    font-size: 1.25rem;
+    font-family: 'Libre Baskerville', serif;
+}
+
+/* TERMINA INDEX */
+
+
+
+/* EMPIEZA PRODUCTOS */
+
+.prod_titulos{
+    display: grid;
+    padding-top: 5vh;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+.prod_titulos h3{
+    color: white;
+    font-size: 2rem;
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 2px;
+}
+.prod_titulos h2{
+    color: gold;
+    font-size: 2.5rem;
+    font-style: italic;
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 2px;
+}
+.prod__margin{
+    margin: 2vw;
+}
+.card_font_title{
+    color: white;
+    font-size: 1.5rem;
+    font-family: 'Fjalla One', sans-serif;
+}
+
+.card_font_description{
+    color: white;
+    font-size: 1rem;
+    font-family: 'Slabo 27px', serif;
+}
+/* TERMINA PRODUCTOS */
+
+
+/* EMPIEZA NOSOTROS */
+.nos__main .tituloNos{
+    display: grid;
+    padding-top: 5vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 5vh;
+}
+
+.nos__main .tituloNos h3{
+    color: white;
+    font-size: 2rem;
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 2px;
+}
+
+.nos__main .tituloNos h2{
+    color: gold;
+    font-size: 2.5rem;
+    font-style: italic;
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 2px;
+}
+
+.nos__main .presentaciones .presentaciones__espacios{
+    margin: 2vh 0vw;
+}
+.nos__main .presentaciones .presentaciones__espacios h3{
+    display: grid;
+    font-size: 2rem;
+    margin: 2vh 0vw;
+    color: white;
+}
+.nos__main .presentaciones .presentaciones__espacios h3 em{
+    color: gold;
+    font-size: 1.5rem;
+}
+
+/* TERMINA NOSOTROS */
+
+
+
+/* EMPIAZA CONTACTOS */
+
+.tituloCont{
+    display: grid;
+    padding-top: 5vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 5vh;
+}
+
+.tituloCont h3{
+    color: white;
+    font-size: 2rem;
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 2px;
+}
+
+.tituloCont h2{
+    color: gold;
+    font-size: 2.5rem;
+    font-style: italic;
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 2px;
+}
+
+.fill{/* contacto formulario */
+    min-height: 100%;
+    height: 100%;
+}
+
+/* TERMINA CONTACTOS */
+
+
+/* EMPIEZA "ZONAS" */
+
+.zonas_grid{
+    display: grid;
+    grid-template-columns: repeat(2,45%);
+    grid-template-rows: 20vh 60vh;
+    grid-template-areas:
+        "titulo titulo"
+        "zonas mapa";
+}
+
+.zonas_titulo{
+    grid-area: titulo;
+    text-align: center;
+    padding: 0px 20px
+}
+
+.zonas_grid .zonas{
+    grid-area: zonas;
+    text-align: start;
+}
+
+.zonas_grid .mapa{
+    grid-area: mapa;
+}
+
+/* TERMINA ZONAS */
+
+
+/* EMPIAZA FOOTER */
+
+.footer{
+    display: flex;
+    justify-content: space-around;
+    background-color:#232b2b;
+    padding:10px 0px;
+    align-items: center;   
+    color: white;
+}
+
+.footer__p{
+    margin:0;
+    text-align: center;
+}
+
+.footer div a{
+    text-decoration: none;
+}
+
+
+/* TERMINA FOOTER */
+
+
+
+
+@media (min-width:992px) and (max-width:1200px){
+
+    html{
+        font-size: 0.9rem;
+    }
+}
+
+
+
+
+@media (min-width:601px) and (max-width:991px){
+    html{
+        font-size: 0.8rem;
+    }
+     .header{
+        display:flex;
+        justify-content: space-between;
+        align-content: center;
+        background: black;
+        color: white;
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 10px 0px;
+        position: sticky;
+        top: 0;
+        letter-spacing: 0.15rem;
+        height: auto;
+        z-index: 2;
+        justify-content: space-around;
+    }
+    .index_res{
+        display: grid;
+        text-align: center;
+        padding: 3vh 0vw;
+    }
+   
+}
+
+
+
+
+@media (min-width:450px) and (max-width:600px){
+
+    html{
+        font-size: 0.7rem;
+    }
+    .header{
+        display:flex;
+        justify-content: space-around;
+        align-items: center;
+        background: black;
+        color: white;
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 10px 0px;
+        position: sticky;
+        top: 0;
+        letter-spacing: 0.05rem;
+        height: auto;
+        z-index: 2;
+    }
+    .index_res{
+        display: grid;
+        text-align: center;
+        padding-top: 3vh;
+        padding-bottom: 0;
+    }
+   
+}
+
+
+
+
+@media (max-width:449px){
+
+    html{
+        font-size: 0.6rem;
+    }
+    
+     .header{
+        display:grid;
+        justify-content: flex-start;
+        align-items: center;
+        background: black;
+        color: white;
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 10px 0px;
+        position: sticky;
+        top: 0;
+        letter-spacing: 0.05rem;
+        height: auto;
+        z-index: 2;
+    }
+    .index_res{
+        display: grid;
+        text-align: center;
+        padding-top: 3vh;
+        padding-bottom: 0;
+    }
+
+    .tituloNos{
+        display: grid;
+        grid-area: titulo;
+        background:black;
+        padding: 20px;
+        color: white;
+        font-size: 1.5rem;
+        font-style: italic;    
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .footer{
+        display: grid;
+        justify-content: space space-around;
+        background-color:#232b2b;
+        padding:10px 0px;
+        text-align: center;   
+        color: white;
+    }
+    .footer__p{
+        margin:00px;
+        text-align: center;
+    }
+    .footer div a{
+        text-decoration: none;
+    }
+}

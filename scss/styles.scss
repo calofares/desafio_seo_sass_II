@@ -1,0 +1,333 @@
+/* MIXINS con opciones de display y alineaciones */
+
+@mixin display($display, $justify-content, $align-items){
+    display: $display;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}
+
+/* MAP con tamaños de letras para los titulos*/
+
+$hs-tamaños:(
+    h1:3.5rem,
+    h2:2.5rem,
+    h3:2rem,
+);
+
+/*Títulos para usarlos como EXTENDS */
+
+.title_2{
+    color: gold;
+    font-style: italic;
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 2px;
+    font-size: map-get($hs-tamaños,h2);
+}
+
+.title_3{
+    color: white;
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 2px;
+    font-size: map-get($hs-tamaños,h3);
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    font-family: sans-serif;
+    font-size: 1rem;
+   
+    .header{
+        display:flex;
+        justify-content: space-between;
+        background: black;
+        color: white;
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 10px 0px;
+        position: sticky;
+        top: 0;
+        letter-spacing: 0.15rem;
+        height: 100px;
+        z-index: 2;
+        .header_titulo{
+            display: flex;
+            align-items: center;
+            background-image: linear-gradient(to bottom,grey,white);
+            background-clip: text;
+            -webkit-text-fill-color: transparent; 
+            font-family: 'Bebas Neue', cursive;
+            font-size: 3.5rem;
+            letter-spacing: 7.5px;
+            padding-left: 15px;
+            h1{
+            font-size: map-get($hs-tamaños,h1);
+            }
+        }
+        .nav_font_size{
+        font-size: 1.25rem;
+        }
+    }
+    
+    main{
+        background-image: linear-gradient(to bottom,black,#232b2b);
+        .index_titulo{
+            @include display(grid,center,center);
+            text-align: center;
+            padding: 25px 0px;
+            h3{
+                @extend .title_3;
+            }
+            h2{
+                @extend .title_2;
+            }
+        }
+        
+        .index_res{
+            display: flex;
+            text-align: center;
+            padding: 5vh 5vw;
+            .index_res_1{
+                padding: 1vh 5vw;
+            }
+            .index_res_2{
+                padding: 1vh 5vw;
+            }
+            h3 a{
+                display: grid;
+                text-decoration: none;
+                color:white;
+                font-size: 1.25rem;
+                font-family: 'Libre Baskerville', serif;
+            }
+            h3 a:hover{
+                color:gold;
+            }
+        }
+        
+        .prod_titulos{
+            @include display(grid,center,center);
+            padding-top: 5vh;
+            text-align: center;
+            h3{
+                @extend .title_3;
+            }
+            h2{
+                @extend .title_2;
+            }
+        }
+       
+        .prod__margin{
+            margin: 2vw;
+            .card_font_title{
+                color: white;
+                font-size: 1.5rem;
+                font-family: 'Fjalla One', sans-serif;
+            }
+            .card_font_description{
+                color: white;
+                font-size: 1rem;
+                font-family: 'Slabo 27px', serif;
+            }
+        }
+        
+        .tituloNos{
+            @include display(grid,center,center);
+            padding-top: 5vh;
+            text-align: center;
+            margin-bottom: 5vh;
+            h3{
+                @extend .title_3;
+            }
+            h2{
+                @extend .title_2;
+            }
+        }
+        
+        .presentaciones{
+            .presentaciones__espacios{
+                margin: 2vh 0vw;
+                h3{
+                    display: grid;
+                    font-size: map-get($hs-tamaños,h3);
+                    margin: 2vh 0vw;
+                    color: white;
+                    em{
+                        color: gold;
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+        
+        .tituloCont{
+            @include display(grid,center,center);
+            text-align: center;
+            padding-top: 5vh;
+            margin-bottom: 5vh;
+            h3{
+                @extend .title_3;
+            }
+            h2{
+                @extend .title_2;
+            }
+        }
+        
+        .fill{/* contacto formulario */
+            min-height: 100%;
+            height: 100%;
+        }
+        
+        /*     .zonas_grid{          A CORREGIR
+                display: grid;
+                grid-template-columns: repeat(2,45%);
+                grid-template-rows: 20vh 60vh;
+                grid-template-areas:
+                    "titulo titulo"
+                    "zonas mapa";
+                    .zonas_titulo{
+                        grid-area: titulo;
+                        text-align: center;
+                        padding: 0px 20px
+                    }
+                }
+                .zonas{
+                    grid-area: zonas;
+                    text-align: start;
+                }
+                .mapa{
+                    grid-area: mapa;
+                } */
+    }
+    
+    .footer{
+        @include display(flex,space-around,center);
+        background-color:#232b2b;
+        padding:10px 0px;
+        color: white;
+        .footer__p{
+            margin:0;
+            text-align: center;
+        }
+        div a{
+            text-decoration: none;
+        }
+    }
+}
+
+
+
+
+
+@media (min-width:992px) and (max-width:1200px){
+    html{
+        font-size: 0.9rem;
+    }
+}
+
+
+
+@media (min-width:601px) and (max-width:991px){
+    html{
+        font-size: 0.8rem;
+        
+        .header{
+            @include display(flex,space-around,center);
+            background: black;
+            color: white;
+            text-transform: uppercase;
+            text-decoration: none;
+            padding: 10px 0px;
+            position: sticky;
+            top: 0;
+            letter-spacing: 0.15rem;
+            height: auto;
+            z-index: 2;
+        }
+      
+       .index_res{
+           display: grid;
+           text-align: center;
+           padding: 3vh 0vw;
+       }
+    }
+}
+
+
+
+@media (min-width:450px) and (max-width:600px){
+    html{
+        font-size: 0.7rem;
+       
+        .header{
+            @include display(flex,space-around,center);
+            background: black;
+            color: white;
+            text-transform: uppercase;
+            text-decoration: none;
+            padding: 10px 0px;
+            position: sticky;
+            top: 0;
+            letter-spacing: 0.05rem;
+            height: auto;
+            z-index: 2;
+        }
+        
+        .index_res{
+            display: grid;
+            text-align: center;
+            padding-top: 3vh;
+            padding-bottom: 0;
+        }
+    }
+}
+
+
+
+@media (max-width:449px){
+    html{
+        font-size: 0.6rem;
+        
+        .header{
+            @include display(grid,flex-start,center);
+            background: black;
+            color: white;
+            text-transform: uppercase;
+            text-decoration: none;
+            padding: 10px 0px;
+            position: sticky;
+            top: 0;
+            letter-spacing: 0.05rem;
+            height: auto;
+            z-index: 2;
+        }
+    
+        main{
+            .index_res{
+                display: grid;
+                text-align: center;
+                padding-top: 3vh;
+                padding-bottom: 0;
+            }
+        }
+    
+        .footer{
+            @include display(grid,space-around,center);
+            background-color:#232b2b;
+            padding:10px 0px;
+            text-align: center;   
+            color: white;
+            .footer__p{
+                margin:00px;
+                text-align: center;
+            }
+            div a{
+                text-decoration: none;
+            }
+        }
+    }
+}

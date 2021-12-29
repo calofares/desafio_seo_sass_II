@@ -1,0 +1,12 @@
+SEO
+
+A todas las páginas les agregué sus títulos, descripción y keywords.
+Unifiqué los estilos de los títulos en cada página y lo organicé de acuerdo a su jerarquía.
+
+SASS
+
+Creé un MIXIN que recibe parámetros de display y alineaciones.
+Creé un mapa con los distintos tamaños de letras para los diferentes títulos.
+Utilicé extends con las clases de los títulos, ya que es código que se repite en cada una de las páginas.
+
+Pasé todo el código css a scss utilizando las herramientas anteriores.
